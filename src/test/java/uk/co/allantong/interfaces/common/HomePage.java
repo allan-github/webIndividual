@@ -1,4 +1,4 @@
-package uk.co.allantong.ui.common;
+package uk.co.allantong.interfaces.common;
 
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;

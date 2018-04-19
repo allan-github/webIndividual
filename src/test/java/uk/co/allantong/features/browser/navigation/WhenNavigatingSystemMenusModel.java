@@ -1,4 +1,4 @@
-package uk.co.allantong.features.navigation;
+package uk.co.allantong.features.browser.navigation;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.*;
@@ -7,11 +7,11 @@ import org.junit.Test;
 
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
-import uk.co.allantong.models.Menus;
-import uk.co.allantong.steps.navigation.NavigationUser;
+import uk.co.allantong.models.browser.MenusModel;
+import uk.co.allantong.steps.browser.navigation.NavigationUser;
 
 @RunWith(SerenityRunner.class)
-public class WhenNavigatingSystemMenus {
+public class WhenNavigatingSystemMenusModel {
 
     @Steps
     NavigationUser anyOne;
@@ -32,7 +32,7 @@ public class WhenNavigatingSystemMenus {
         anyOne.isOnTheHomePage();
 
         // When
-        anyOne.navigatesTo(Menus.Home);
+        anyOne.navigatesTo(MenusModel.Home);
 
         // Then
         anyOne.shouldSeeThePageTitleContaining("Home Page");
@@ -44,20 +44,19 @@ public class WhenNavigatingSystemMenus {
         anyOne.isOnTheHomePage();
 
         // When
-        anyOne.navigatesTo(Menus.Students);
+        anyOne.navigatesTo(MenusModel.Students);
 
         // Then
         anyOne.shouldSeeThePageTitleContaining("Students");
     }
 
     @Test
-    @Pending
     public void shouldBeAbleToNavigateToStudents() {
         // Given
         authenticatedUser.isOnTheHomePage();
 
         // When
-        authenticatedUser.navigatesTo(Menus.Students);
+        authenticatedUser.navigatesTo(MenusModel.Students);
 
         // Then
         authenticatedUser.shouldSeeThePageTitleContaining("Login");
@@ -69,7 +68,7 @@ public class WhenNavigatingSystemMenus {
         anyOne.isOnTheHomePage();
 
         // When
-        anyOne.navigatesTo(Menus.About);
+        anyOne.navigatesTo(MenusModel.About);
 
         // Then
         anyOne.shouldSeeThePageTitleContaining("About");
@@ -81,7 +80,7 @@ public class WhenNavigatingSystemMenus {
         anyOne.isOnTheHomePage();
 
         // When
-        anyOne.navigatesTo(Menus.Contact);
+        anyOne.navigatesTo(MenusModel.Contact);
 
         // Then
         anyOne.shouldSeeThePageTitleContaining("Contact");
@@ -93,7 +92,7 @@ public class WhenNavigatingSystemMenus {
         anyOne.isOnTheHomePage();
 
         // When
-        anyOne.navigatesTo(Menus.Register);
+        anyOne.navigatesTo(MenusModel.Register);
 
         // Then
         anyOne.shouldSeeThePageTitleContaining("Register");
@@ -106,10 +105,17 @@ public class WhenNavigatingSystemMenus {
         anyOne.isOnTheHomePage();
 
         // When
-        anyOne.navigatesTo(Menus.Log);
+        anyOne.navigatesTo(MenusModel.Log);
 
         // Then
         anyOne.shouldSeeThePageTitleContaining("Login");
+    }
+
+
+    @Test
+    @Pending
+    public void shouldBeAbleToLogoutWhenAuthenticated() {
+
     }
 
 

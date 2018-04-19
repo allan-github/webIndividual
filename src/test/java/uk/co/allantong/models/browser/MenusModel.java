@@ -1,6 +1,6 @@
-package uk.co.allantong.models;
+package uk.co.allantong.models.browser;
 
-public enum Menus {
+public enum MenusModel {
     Home,
     Students,
     About,
